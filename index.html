@@ -22,6 +22,38 @@
             max-height: 300px; /* Ajuste o tamanho conforme necessário */
         }
 
+            /* Botão WhatsApp flutuante */
+            .whatsapp-btn {
+                position: fixed;
+                bottom: 20px; /* Ajuste a distância do fundo aqui */
+                right: 20px;
+                background-color: #25D366;
+                border-radius: 50%;
+                padding: 20px; /* Tamanho maior do botão */
+                font-size: 2.5rem;
+                color: white;
+                text-align: center;
+                cursor: pointer;
+                z-index: 100;
+                transition: background-color 0.3s ease;
+                width: 60px; /* Ajuste o tamanho para garantir um formato circular perfeito */
+                height: 60px; /* Ajuste o tamanho para garantir um formato circular perfeito */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none; /* Remover sublinhado do link */
+            }
+
+            /* Ajuste para o ícone dentro do botão */
+            .whatsapp-btn i {
+                font-size: 2.5rem; /* Tamanho do ícone */
+            }
+
+            /* Efeito de hover */
+            .whatsapp-btn:hover {
+                background-color: #128C7E;
+            }
+
         @media (max-width: 768px) {
         #sizeShoes {
             font-size: 16px;
@@ -39,6 +71,13 @@
 
 <body>
 
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/554598365970?text=Olá!%20Tenho%20interesse%20em%20algumas%20roupas." target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="#">
@@ -325,7 +364,7 @@
         <!-- Contato -->
         <div class="col-md-4 mb-3 text-center row" target="_blank">
           <h5 style="font-weight: bold;">Contato</h5>
-            <a href="https://wa.me/554598365970?text=Olá!%20Gostaria%20de%20comprar%20umas%20roupas." target="_blank" class="text-white"><i class="fas fa-phone-alt "></i> (45) 9836-5970</a>
+            <a href="https://wa.me/554598365970?text=Olá!%20Tenho%20interesse%20em%20algumas%20roupas." target="_blank" class="text-white"><i class="fas fa-phone-alt "></i> (45) 9836-5970</a>
             <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&ddm=1" target="_blank"  class="text-white"><i class="fas fa-envelope"></i> henriblackstyle@gmail.com</a>
         </div>      
 
@@ -364,7 +403,7 @@
 
         // Monta a mensagem com o nome do produto, tamanho selecionado e o link do produto
         // const message = `${productUrl}\nOlá, gostaria de comprar o ${productName}, tamanho ${selectedSize}.`;
-        const message = `Olá, gostaria de comprar o(a) ${productName}, tamanho ${selectedSize}.`;
+        const message = `Olá, tenho interesse no(a) ${productName}, tamanho ${selectedSize}.`;
         const whatsappLink = `https://wa.me/554598365970?text=${encodeURIComponent(message)}`;
         
         document.getElementById(`whatsappLink-${productId}`).href = whatsappLink;
@@ -435,4 +474,4 @@
 
 
 </body>
-</html>
+</html>    
