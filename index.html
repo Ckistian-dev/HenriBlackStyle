@@ -45,6 +45,7 @@
             .modal-dialog {
                 max-width: 50%; width: 50%; max-height: 50%; height: auto;
             }
+
         }
 
         /* Para telas pequenas (<992px): linha horizontal entre itens */
@@ -72,62 +73,75 @@
 
 <!-- Navegação -->
 <nav class="navbar navbar-expand-lg navbar-dark p-3 fixed-top" style="background-color: rgb(12, 12, 12);">
-    <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="https://i.ibb.co/Ndz7RVg4/imagem-2025-03-07-084224510.png" alt="Logo" width="50" height="50" class="me-2">
-            <div class="d-flex flex-column">
-                <h4 class="m-0 text-white">HENRI</h4>
-                <h6 class="m-0 text-white">Black Style</h6>
-            </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav ms-auto text-end">
-
-                <!-- Submenu Times -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownTimesBrasileiros" role="button" data-bs-toggle="dropdown">
-                        Categoria
-                    </a>
-                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdownTemporadas" style="font-size: 12px; background-color: rgb(12, 12, 12);">
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('camisa')">Camisas</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('calça')">Calças</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('blazer')">Blazers</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('jaqueta')">Jaquetas</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('tênis')">Tênis</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('polo')">Polos</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('bermuda')">Bermudas</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('bonés')">Bonés</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('moletom')">Moletons</a></li>                     
-                    </ul>
-                </li>
-                <!-- Submenu Temporadas -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownTimesGlobais" role="button" data-bs-toggle="dropdown">
-                        Marcas
-                    </a>
-                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdownTemporadas" style="font-size: 12px; background-color: rgb(12, 12, 12);">
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('nike')">Nike</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('adidas')">Adidas</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('puma')">Puma</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('ralphlauren')">Ralph Lauren</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('lacoste')">Lacoste</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('calvinklein')">Calvin Klein</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('tommyhilfiger')">Tommy Hilfiger</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('levis')">Levi's</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('armani')">Armani</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('gucci')">Gucci</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('boss')">Hugo Boss</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('zara')">Zara</a></li>
-                        <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('diesel')">Diesel</a></li>                        
-                    </ul>
-                </li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://i.ibb.co/Ndz7RVg4/imagem-2025-03-07-084224510.png" alt="Logo" width="50" height="50" class="me-2">
+      <div class="d-flex flex-column">
+        <h4 class="m-0 text-white">HENRI</h4>
+        <h6 class="m-0 text-white">Black Style</h6>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <!-- Dropdown de Categorias -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#Produtos" id="dropdownCategorias" role="button" data-bs-toggle="dropdown">
+            Categorias
+          </a>
+          <ul class="dropdown-menu dropdown-menu-start text-start" aria-labelledby="dropdownCategorias" style="font-size: 12px; background-color: rgb(12, 12, 12);">
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('camisa surf')">Camisa Surf</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('camisa oversized')">Camisa Oversized</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('camisa peruana')">Camisa Peruana</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('egípcia')">Camisa Egípcia</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('malhão over street')">Malhão Over Street</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('moletom')">Moletom</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('shorts tactel')">Shorts Tactel</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('calça moletom')">Calça Moletom</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('boné')">Boné</a></li>
+          </ul>
+        </li>
+        <!-- Dropdown de Marcas -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#Produtos" id="dropdownMarcas" role="button" data-bs-toggle="dropdown">
+            Marcas
+          </a>
+          <ul class="dropdown-menu dropdown-menu-start text-start" aria-labelledby="dropdownMarcas" style="font-size: 12px; background-color: rgb(12, 12, 12);">
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('adidas')">Adidas</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('air jordan')">Air Jordan</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('anti social social club')">Anti Social Social Club</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('armani')">Armani</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('born to ride')">Born To Ride</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('california dreaming')">California Dreaming</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('calvin klein')">Calvin Klein</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('diamond')">Diamond</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('diesel')">Diesel</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('fendi')">Fendi</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('gucci')">Gucci</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('high')">High</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('hurley')">Hurley</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('lacoste')">Lacoste</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('new era')">New Era</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('nike')">Nike</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('ny yankees')">NY Yankees</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('oakley')">Oakley</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('quiksilver')">Quiksilver</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('rvca')">RVCA</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('santa cruz')">Santa Cruz</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('skate')">Skate</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('snaptrap')">SnapTrap</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('tommy hilfiger')">Tommy Hilfiger</a></li>
+            <li><a class="dropdown-item text-white" href="#Produtos" onclick="filterProducts('vans')">Vans</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
+
+
 
 <!-- Fullscreen Header -->
 <header id="home" class="d-flex justify-content-center align-items-center text-center min-vh-100 bg-black text-white">
@@ -143,44 +157,44 @@
 <!-- Destaques -->
 
 <section id="Produtos" style="background-color: black;">
-    <div class="container py-5">
-        <h2 class="text-center mb-4 text-white fs-1">PRODUTOS</h2>
-        <div class="container mt-4">
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos" aria-describedby="search-button" onkeyup="filterProducts()">
-                <button class="btn btn-custom text-white" style="background-color:rgb(34, 33, 33)" type="button" id="search-button" onclick="filterProducts()">Pesquisar</button>
-            </div>
-            <div class="row" id="products-list">
-                <!-- Os produtos serão inseridos dinamicamente aqui -->
-            </div>
-        </div>
-    </div>
+  <div class="container py-5">
+      <h2 class="text-center mb-4 text-white fs-1">PRODUTOS</h2>
+      <div class="container mt-4">
+          <div class="input-group mb-4">
+              <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos" aria-describedby="search-button" onkeyup="filterProducts()">
+              <button class="btn btn-custom text-white" style="background-color:rgb(34, 33, 33)" type="button" id="search-button" onclick="filterProducts()">Pesquisar</button>
+          </div>
+          <div class="row" id="products-list">
+              <!-- Os produtos serão inseridos dinamicamente aqui -->
+          </div>
+      </div>
+  </div>
 
-    <!-- Modal com Carousel para exibição das imagens ampliadas -->
-    <div class="modal fade" id="imageModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-            <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" id="modalCarouselInner">
-                <!-- Itens do carousel serão inseridos dinamicamente -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
+  <!-- Modal com Carousel para exibição das imagens ampliadas -->
+  <div class="modal fade" id="imageModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+          <div class="modal-body p-0">
+          <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="modalCarouselInner">
+              <!-- Itens do carousel serão inseridos dinamicamente -->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
 </section>
 
 <!-- Elemento para exibir a mensagem de "Nenhum resultado encontrado" -->
 <div id="noResultsMessage" class="alert alert-light text-center d-none d-flex justify-content-center align-items-center mb-4" role="alert" style="font-size: 1.5rem; min-height: 550px; max-width: 95%; margin: 0 auto;">
-    Nenhum produto encontrado.
+  Nenhum produto encontrado.
 </div>
 
 <!-- Rodapé -->
@@ -275,25 +289,31 @@
         selectedButton.classList.remove('btn-dark'); // Altera a cor para indicar seleção
     }
 
-    // Função que trata o clique no botão "Comprar"
-    function comprar(productId) {
-        // Verifica se há um botão de tamanho selecionado
-        const selectedButton = document.querySelector(`#product-${productId} .size-btn-group button.active`);
-        if (!selectedButton) {
-            alert("Por favor, selecione um tamanho antes de prosseguir.");
-            return; // Interrompe a função sem abrir o WhatsApp
-        }
-        
-        // Se houver tamanho selecionado, obtém as informações necessárias
-        const size = selectedButton.textContent;
-        const name = document.getElementById(`productName-${productId}`).textContent;
-        
-        // Monta a URL do WhatsApp com a mensagem
-        const whatsappUrl = `https://wa.me/554598365970?text=Tenho%20interesse%20no(a)%20${encodeURIComponent(name)},%20tamanho%20${encodeURIComponent(size)}.`;
-        
-        // Abre o WhatsApp em uma nova aba
-        window.open(whatsappUrl, '_blank');
+// Função que trata o clique no botão "Conversar no Whatsapp"
+function comprar(productId) {
+    // Verifica se há um botão de tamanho selecionado
+    const selectedButton = document.querySelector(`#product-${productId} .size-btn-group button.active`);
+    if (!selectedButton) {
+        alert("Por favor, selecione um tamanho antes de prosseguir.");
+        return; // Interrompe a função se nenhum tamanho estiver selecionado
     }
+    
+    // Obtém as informações necessárias
+    const size = selectedButton.textContent;
+    const name = document.getElementById(`productName-${productId}`).textContent;
+    
+    // Define o link do produto diretamente com base no ID, conforme o padrão desejado
+    const productHref = `https://ckistian-dev.github.io/HenriBlackStyle/#product-${productId}`;
+    
+    // Monta a mensagem que será enviada no WhatsApp, incluindo o link
+    const message = `Tenho interesse no(a) ${name}, tamanho ${size}. Link: ${productHref}`;
+    
+    // Codifica a mensagem e monta a URL do WhatsApp
+    const whatsappUrl = `https://wa.me/554598365970?text=${encodeURIComponent(message)}`;
+    
+    // Abre o WhatsApp em uma nova aba
+    window.open(whatsappUrl, '_blank');
+}
 
     // Adiciona um listener para cliques em qualquer lugar da página
     document.addEventListener('click', function (event) {
@@ -327,7 +347,7 @@
         id: 1,
         nome: "Camisa Surf Nike Preta",
         status: "Sob Encomenda",
-        preco: "De R$ 129,00 por R$ 85,00",
+        preco: "De R$ 129,00 por R$ 85,00",
         imagens: [
           "https://ricostoreatacado.com/wp-content/uploads/2025/02/114.webp"
         ],
@@ -337,7 +357,7 @@
         id: 2,
         nome: "Camisa Surf Hight Bege",
         status: "Sob Encomenda",
-        preco: "De R$ 129,00 por R$ 85,00",
+        preco: "De R$ 129,00 por R$ 85,00",
         imagens: [
           "https://ricostoreatacado.com/wp-content/uploads/2025/02/116.webp"
         ],
@@ -347,7 +367,7 @@
         id: 3,
         nome: "Camisa Surf Diamond Preta",
         status: "Sob Encomenda",
-        preco: "De R$ 129,00 por R$ 85,00",
+        preco: "De R$ 129,00 por R$ 85,00",
         imagens: [
           "https://ricostoreatacado.com/wp-content/uploads/2025/02/112.webp"
         ],
@@ -357,100 +377,1459 @@
         id: 4,
         nome: "Camisa Surf NY Yankees Bege",
         status: "Sob Encomenda",
-        preco: "De R$ 129,00 por R$ 85,00",
+        preco: "De R$ 129,00 por R$ 85,00",
         imagens: [
           "https://ricostoreatacado.com/wp-content/uploads/2025/02/113.webp"
         ],
         tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
       },
       {
-        id: 2,
+        id: 5,
         nome: "Camisa Surf Nike Cinza",
         status: "Sob Encomenda",
-        preco: "De R$ 129,00 por R$ 85,00",
+        preco: "De R$ 129,00 por R$ 85,00",
         imagens: [
           "https://ricostoreatacado.com/wp-content/uploads/2025/02/115.webp"
         ],
         tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
       },
+      {
+        id: 6,
+        nome: "Camisa Surf Hurley Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/108.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 7,
+        nome: "Camisa Surf Quik Silver Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/103.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 8,
+        nome: "Camisa Surf Vans Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/104.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 9,
+        nome: "Camisa Surf NY Yankees Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/107.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 10,
+        nome: "Camisa Surf Anti Social Social Club Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/111.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 11,
+        nome: "Camisa Surf High Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/101.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 12,
+        nome: "Camisa Surf Lacoste Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/102.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 13,
+        nome: "Camisa Surf RVCA Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/100.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 14,
+        nome: "Camisa Surf New Era Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/105.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 15,
+        nome: "Camisa Surf High Preta Estilizada",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/109.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 16,
+        nome: "Camisa Surf Lacoste Preta Estilizada",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/110.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 17,
+        nome: "Camisa Surf NY Yankees Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/107.webp"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 18,
+        nome: "Camisa Surf Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/63.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 19,
+        nome: "Camisa Surf Nike Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/61.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 20,
+        nome: "Camisa Surf Nike Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/68.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 21,
+        nome: "Camisa Surf Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/62.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 22,
+        nome: "Camisa Surf Vape Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/72.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 23,
+        nome: "Camisa Surf Vape Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/71.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 24,
+        nome: "Camisa Surf Vape Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/70.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 25,
+        nome: "Camisa Surf Volcom Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/66.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 26,
+        nome: "Camisa Surf Volcom Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/67.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 27,
+        nome: "Camisa Surf Volcom Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/69.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 28,
+        nome: "Camisa Surf Volcom Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 129,00 por R$ 85,00",
+        imagens: [
+          "https://ricostoreatacado.com/wp-content/uploads/2025/02/65.jpg"
+        ],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 29,
+        nome: "Camisa Oversized Air Jordan Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/153-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 30,
+        nome: "Camisa Oversized Vans Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/155-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 31,
+        nome: "Camisa Oversized Air Jordan Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/151-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 32,
+        nome: "Camisa Oversized Air Jordan Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/159-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 33,
+        nome: "Camisa Oversized High Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/147-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 34,
+        nome: "Camisa Oversized High Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/152-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 35,
+        nome: "Camisa Oversized Santa Cruz Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/150-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 36,
+        nome: "Camisa Oversized Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/158-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 37,
+        nome: "Camisa Oversized NY Yankees Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/157-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 38,
+        nome: "Camisa Oversized Air Jordan Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/149-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 39,
+        nome: "Camisa Oversized Quik Silver Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/156-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 40,
+        nome: "Camisa Oversized New Era Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/154-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 41,
+        nome: "Camisa Oversized High Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/148-1168x1536.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 42,
+        nome: "Camisa Peruana Tommy Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/89.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 43,
+        nome: "Camisa Peruana Giorno Armani Verde",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/90.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 44,
+        nome: "Camisa Peruana Diesel Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/87.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 45,
+        nome: "Camisa Peruana Tommy Verde",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/86.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 46,
+        nome: "Camisa Peruana Hugo Boss Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/88.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 47,
+        nome: "Camisa Peruana Diesel Verde",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/83.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 48,
+        nome: "Camisa Peruana Giorno Armani Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/84.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 49,
+        nome: "Camisa Peruana Giorno Armani Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/85.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 50,
+        nome: "Camisa Peruana Giorno Armani Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/80.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 51,
+        nome: "Camisa Peruana Diesel Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/81.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 52,
+        nome: "Camisa Peruana Lacoste branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/77.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 53,
+        nome: "Camisa Peruana Lacoste Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/82.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 54,
+        nome: "Camisa Peruana Hugo Boss Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/78.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 55,
+        nome: "Camisa Peruana Hugo Boss Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/79.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 56,
+        nome: "Camisa Peruana Hugo Boss Verde",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/74.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 57,
+        nome: "Camisa Peruana Lacoste Verde",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/75.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 58,
+        nome: "Camisa Peruana Tommy Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/76.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 59,
+        nome: "Camisa Peruana Lacoste Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/73.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 60,
+        nome: "Camisa Peruana Diesel Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/146.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 61,
+        nome: "Camisa Peruana Diesel Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/143.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 62,
+        nome: "Camisa Peruana Hugo Boss Salmão",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/144.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 63,
+        nome: "Camisa Peruana Diesel Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/140.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 64,
+        nome: "Camisa Peruana Diesel Salmão",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/141.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 65,
+        nome: "Camisa Peruana Diesel Rosa",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/142.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 66,
+        nome: "Camisa Peruana Calvin Klein Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/137.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 67,
+        nome: "Camisa Peruana Fendi Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/138.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 68,
+        nome: "Camisa Peruana Fendi Salmão",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/139.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 69,
+        nome: "Camisa Peruana Fendi Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/134.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 70,
+        nome: "Camisa Peruana Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/135.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 71,
+        nome: "Camisa Peruana Gucci Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/136.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 72,
+        nome: "Camisa Peruana Nike Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/132.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 73,
+        nome: "Camisa Peruana Nike Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/133.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 74,
+        nome: "Camisa Peruana Hugo Boss Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/129.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 75,
+        nome: "Camisa Peruana Hugo Boss Rosa",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/130.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 76,
+        nome: "Camisa Peruana Nike Salmão",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/131.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 77,
+        nome: "Camisa Peruana Prada Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/127.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 78,
+        nome: "Camisa Peruana Hugo Boss Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/128.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 79,
+        nome: "Camisa Peruana Lacoste Rosa",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/124.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 80,
+        nome: "Camisa Peruana Lacoste Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/125.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 81,
+        nome: "Camisa Peruana Lacoste Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/126.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 82,
+        nome: "Camisa Peruana Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/122.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 83,
+        nome: "Camisa Peruana Lacoste Salmão",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/123.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 84,
+        nome: "Camisa Peruana Prada Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/120.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 85,
+        nome: "Camisa Peruana Hilfiger Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/121.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 86,
+        nome: "Camisa Peruana Hugo Boss Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/119.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 87,
+        nome: "Camisa Peruana Gucci Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/118.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 88,
+        nome: "Camisa Peruana Giorno Armani Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 165,90 por R$ 95,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/117.png"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 89,
+        nome: "Camisa Egípcia Tommy Hilfiger Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/41.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 90,
+        nome: "Camisa Egípcia Tommy Hilfiger Vermelha",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/39.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 91,
+        nome: "Camisa Egípcia Tommy Hilfiger Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/40.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 92,
+        nome: "Camisa Egípcia Tommy Hilfiger Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/46.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/45.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 93,
+        nome: "Camisa Egípcia Tommy Hilfiger Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/43.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/44.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 94,
+        nome: "Camisa Egípcia Hugo Boss Vermelha",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/48.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 95,
+        nome: "Camisa Egípcia Hugo Boss Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/47.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 96,
+        nome: "Camisa Egípcia Hugo Boss Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/51-1.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 97,
+        nome: "Camisa Egípcia Hugo Boss Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/50.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 98,
+        nome: "Camisa Egípcia Hugo Boss Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/49.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 99,
+        nome: "Camisa Egípcia Nike Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/52-1.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 100,
+        nome: "Camisa Egípcia Nike Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/54-1.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 101,
+        nome: "Camisa Egípcia Nike Vermelha",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/53.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 102,
+        nome: "Camisa Egípcia Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/56-1.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 103,
+        nome: "Camisa Egípcia Nike Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/55-1.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 104,
+        nome: "Camisa Egípcia Lacoste Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/59.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 105,
+        nome: "Camisa Egípcia Lacoste Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/58.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 106,
+        nome: "Camisa Egípcia Lacoste Marrom",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/57-1.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 107,
+        nome: "Camisa Egípcia Lacoste Vermelha",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/60.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 108,
+        nome: "Malhão Over Street Adidas Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/31.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 109,
+        nome: "Malhão Over Street Adidas Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/32.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 110,
+        nome: "Malhão Over Street Adidas Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/33.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 111,
+        nome: "Malhão Over Street California Dreaming Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/38.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 112,
+        nome: "Malhão Over Street California Dreaming Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/37.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 113,
+        nome: "Malhão Over Street California Dreaming Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/36.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 114,
+        nome: "Malhão Over Street Nike Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/23.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 115,
+        nome: "Malhão Over Street Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/24.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 116,
+        nome: "Malhão Over Street Nike Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/25.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 117,
+        nome: "Malhão Over Street Born To Ride Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/29.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 118,
+        nome: "Malhão Over Street Born To Ride Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/28.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 119,
+        nome: "Malhão Over Street Born To Ride Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/30.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 120,
+        nome: "Malhão Over Street Nike Bege",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/35.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 121,
+        nome: "Malhão Over Street Nike Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/34.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 122,
+        nome: "Malhão Over Street Skate Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/27.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 123,
+        nome: "Malhão Over Street Skate Branca",
+        status: "Sob Encomenda",
+        preco: "De R$ 199,90 por R$ 139,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/26.jpg"],
+        tamanhos: ["P", "M", "G", "GG"],
+      },
+      {
+        id: 124,
+        nome: "Moletom Hugo Boss Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/2.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 125,
+        nome: "Moletom Hugo Boss Vermelho",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/6-1.png"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 126,
+        nome: "Moletom Hugo Boss Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/3.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 127,
+        nome: "Moletom Hugo Boss Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/1.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 128,
+        nome: "Moletom Nike Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/5-779x1024.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 129,
+        nome: "Moletom Nike Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/10.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 130,
+        nome: "Moletom Nike Vermelho",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/8.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/4.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 131,
+        nome: "Moletom Nike Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/12.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 132,
+        nome: "Moletom Lacoste Vermelho",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/14.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/13.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/16.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 133,
+        nome: "Moletom Lacoste Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/9.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 134,
+        nome: "Moletom Lacoste Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/11.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 135,
+        nome: "Moletom Lacoste Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/15.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 136,
+        nome: "Moletom Santa Cruz Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/18.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 137,
+        nome: "Moletom Air Jordan Laranja",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/22.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 138,
+        nome: "Moletom Santa Cruz Branco",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/20.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 139,
+        nome: "Moletom Air Jordan Rosa",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/19.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 140,
+        nome: "Moletom Santa Cruz Laranja",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/21.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 141,
+        nome: "Moletom Air Jordan Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 299,90 por R$ 199,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/17.jpg"],
+        tamanhos: ["P", "M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 142,
+        nome: "Shorts Tactel Lacoste Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/4-1024x1024.png"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 143,
+        nome: "Shorts Tactel Nike Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/5-1-1024x1024.png"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 144,
+        nome: "Shorts Tactel High Azul Escuro",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/1-1024x1024.png"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 145,
+        nome: "Shorts Tactel Nike Azul Escuro",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/2-1-1024x1024.png"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 146,
+        nome: "Shorts Tactel Nike Branco",
+        status: "Sob Encomenda",
+        preco: "De R$ 179,90 por R$ 119,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/3-1024x1024.png"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 147,
+        nome: "Calça Moletom Diesel Preta",
+        status: "Sob Encomenda",
+        preco: "De R$ 189,90 por R$ 149,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/91-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/92-1.jpg"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 148,
+        nome: "Calça Moletom Diesel Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 189,90 por R$ 149,90",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/93-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/94-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/96-1.jpg"],
+        tamanhos: ["M", "G", "GG", "G1", "G2"],
+      },
+      {
+        id: 149,
+        nome: "Boné FlexFit Quiksilver Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/80-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/78-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/79-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 150,
+        nome: "Boné FlexFit Quiksilver Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/77-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/71-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/70-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 151,
+        nome: "Boné FlexFit Quiksilver Verde Musgo",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/72-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/73-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 152,
+        nome: "Boné FlexFit Quiksilver Branco",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/65-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/66-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 153,
+        nome: "Boné FlexFit Quiksilver Verde Musgo",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/61-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/62-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 154,
+        nome: "Boné FlexFit Quiksilver Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/67-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/68-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 155,
+        nome: "Boné FlexFit Quiksilver Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/74-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/75-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 156,
+        nome: "Boné FlexFit Oakley Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/13-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/14-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/15-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 157,
+        nome: "Boné FlexFit Quiksilver Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/43-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/44-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/33-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 158,
+        nome: "Boné FlexFit Quiksilver Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/30-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/32-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/31-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 159,
+        nome: "Boné FlexFit Quiksilver Vermelho",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/34-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/2-2.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/18-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 160,
+        nome: "Boné FlexFit Oakley Verde Musgo",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/9-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/10-3.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/11-2.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 161,
+        nome: "Boné FlexFit Oakley Vermelho",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/16-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/17-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/8-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 162,
+        nome: "Boné SnapTrap Nike Ciano",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/55-2.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/57-2.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 163,
+        nome: "Boné SnapTrap Nike Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/58-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/59-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 164,
+        nome: "Boné SnapTrap Tommy Hilfiger Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/52-2.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/54-2.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 165,
+        nome: "Boné SnapTrap Tommy Hilfiger Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/48-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/49-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 166,
+        nome: "Boné SnapTrap Giorno Armani Preto",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/46-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/47-1.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 167,
+        nome: "Boné SnapTrap Giorno Armani Cinza",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/50-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/51-2.jpg"],
+        tamanhos: ["Único"],
+      },
+      {
+        id: 168,
+        nome: "Boné SnapTrap Lacoste Azul",
+        status: "Sob Encomenda",
+        preco: "De R$ 129.00 por R$ 85,00",
+        imagens: ["https://ricostoreatacado.com/wp-content/uploads/2025/02/38-1.jpg", "https://ricostoreatacado.com/wp-content/uploads/2025/02/37-1.jpg"],
+        tamanhos: ["Único"],
+      }
+          
     ];
     
-    // Função para carregar os produtos e montar os cards
-    function carregarProdutos() {
-      const container = document.getElementById("products-list");
-      container.innerHTML = ""; // Limpa o conteúdo
-    
-      produtos.forEach(produto => {
-        const card = document.createElement("div");
-        card.classList.add("col-md-4", "mb-4", "product-card");
-        card.innerHTML = `
-          <div id="product-${produto.id}" class="card">
-            <div id="carouselProduct${produto.id}" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                ${produto.imagens.map((img, index) => `
-                  <div class="carousel-item ${index === 0 ? "active" : ""}" style="max-height: 400px">
-                    <img src="${img}" class="d-block w-100" alt="${produto.nome} Imagem ${index + 1}" style="cursor:pointer;" onclick="showImage(event, ${produto.id})">
-                  </div>
-                `).join("")}
+// Função para carregar os produtos e montar os cards
+function carregarProdutos() {
+  const container = document.getElementById("products-list");
+  container.innerHTML = ""; // Limpa o conteúdo
+
+  // Se a URL possuir um hash no formato "#product-<id>", filtra para exibir apenas esse produto
+  const hash = window.location.hash;
+  let filteredProducts = produtos;
+  if (hash && hash.startsWith("#product-")) {
+    const productId = parseInt(hash.replace("#product-", ""), 10);
+    filteredProducts = produtos.filter(produto => produto.id === productId);
+  }
+
+  filteredProducts.forEach(produto => {
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "mb-4", "product-card");
+    card.innerHTML = `
+      <div id="product-${produto.id}" class="card">
+        <div id="carouselProduct${produto.id}" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            ${produto.imagens.map((img, index) => `
+              <div class="carousel-item ${index === 0 ? "active" : ""}" style="max-height: 280px">
+                <img src="${img}" class="d-block w-100" alt="${produto.nome} Imagem ${index + 1}" style="cursor:pointer;" onclick="showImage(event, ${produto.id})">
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct${produto.id}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct${produto.id}" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="card-body d-flex flex-column justify-content-between">
-              <h5 class="card-title" id="productName-${produto.id}">${produto.nome}</h5>
-              <p class="card-text mb-2" style="color: ${produto.status === 'Esgotado' ? 'red' : 'black'}">${produto.status}</p>
-              <p class="card-price mb-2 text-black">${produto.preco}</p>
-              <div class="mt-auto">
-                <div class="size-btn-group mb-3">
-                  ${produto.tamanhos.map(tamanho => `
-                    <button id="btn-${tamanho}-${produto.id}" class="btn btn-dark btn-sm mb-1" onclick="toggleSize(${produto.id}, '${tamanho}')">${tamanho}</button>
-                  `).join("")}
-                </div>
-                <a id="whatsappLink-${produto.id}" class="btn btn-success" href="#">
-                    Conversar no Whatsapp
-                </a>
-              </div>
-            </div>
+            `).join("")}
           </div>
-        `;
-        
-        // Adiciona o evento de clique no botão do WhatsApp
-        const whatsappLink = card.querySelector(`#whatsappLink-${produto.id}`);
-        whatsappLink.addEventListener('click', function (event) {
-          event.preventDefault(); // Previne o comportamento padrão do link
-          comprar(produto.id); // Chama a função de compra com o id do produto
-        });
-    
-        container.appendChild(card);
-      });
-    }
-    
-    // Função para exibir o modal com o carousel de imagens
-    function showImage(event, productId) {
-      const produto = produtos.find(p => p.id === productId);
-      if (!produto) return;
-    
-      // Monta os itens do carousel com a imagem ajustada corretamente
-      const carouselItems = produto.imagens.map((img, index) => {
-        return `
-          <div class="carousel-item ${index === 0 ? 'active' : ''}" style="text-align: center;">
-            <div class="modal-img-container" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-              <img src="${img}" alt="${produto.nome} Imagem ${index + 1}" style="width: 100%; height: 100%; object-fit: contain;">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct${produto.id}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct${produto.id}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title" id="productName-${produto.id}">${produto.nome}</h5>
+          <p class="card-text mb-2" style="color: ${produto.status === 'Esgotado' ? 'red' : 'black'}">${produto.status}</p>
+          <p class="card-price mb-2 text-black">${produto.preco}</p>
+          <div class="mt-auto">
+            <div class="size-btn-group mb-3">
+              ${produto.tamanhos.map(tamanho => `
+                <button id="btn-${tamanho}-${produto.id}" class="btn btn-dark btn-sm mb-1" onclick="toggleSize(${produto.id}, '${tamanho}')">${tamanho}</button>
+              `).join("")}
             </div>
+            <a id="whatsappLink-${produto.id}" class="btn btn-success" href="#">
+                Conversar no Whatsapp
+            </a>
           </div>
-        `;
-      }).join("");
+        </div>
+      </div>
+    `;
     
-      document.getElementById("modalCarouselInner").innerHTML = carouselItems;
-      new bootstrap.Modal(document.getElementById("imageModal")).show();
-    }
-    
-    // Inicializa a listagem de produtos
-    carregarProdutos();
+    // Adiciona o evento de clique no botão do WhatsApp
+    const whatsappLink = card.querySelector(`#whatsappLink-${produto.id}`);
+    whatsappLink.addEventListener('click', function (event) {
+      event.preventDefault(); // Previne o comportamento padrão do link
+      comprar(produto.id); // Chama a função de compra com o id do produto
+    });
+
+    container.appendChild(card);
+  });
+}
+
+// Função para exibir o modal com o carousel de imagens
+function showImage(event, productId) {
+  const produto = produtos.find(p => p.id === productId);
+  if (!produto) return;
+
+  // Monta os itens do carousel com a imagem ajustada corretamente
+  const carouselItems = produto.imagens.map((img, index) => {
+    return `
+      <div class="carousel-item ${index === 0 ? 'active' : ''}" style="text-align: center;">
+        <div class="modal-img-container" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+          <img src="${img}" alt="${produto.nome} Imagem ${index + 1}" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("modalCarouselInner").innerHTML = carouselItems;
+  new bootstrap.Modal(document.getElementById("imageModal")).show();
+}
+
+// Inicializa a listagem de produtos
+carregarProdutos();
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
